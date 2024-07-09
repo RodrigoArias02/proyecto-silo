@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #9a616d;
+
+}
+.grid-contenedor{
+    display: grid;
+    grid-template-areas:
+    "datos"
+    "tabla";
+    grid-template-rows: repeat(auto-fit, 1fr);
+    height: 100%;
+    overflow-x: hidden;
+}
+.caja-flex{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    margin-top: 25px;
+}
+h1{
+    padding-bottom: 10px;
+}
+.flex-btn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@media screen and (max-width:700px) {
+    h1{
+        font-size: 1em;
+        padding-bottom: 10px;
+    }
+}
+.imagen{
+    background-image: url(../img/campo4.jpg);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-position:bottom;
+    background-size: cover;
+    width: 100%;
+    height: 100px;
+}
+.datos{
+    background: #ffffffff;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin-bottom: 25px;
+
+    padding: 10px;
+}
+.datos input {
+    padding: 10px;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: lighter;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: gray;
+    border: 1px solid gray;  
+    width: 100%;
+}
+
+input:focus{
+    border: 2px solid #1266f1;
+    outline: none;
+}
+
+input:focus::placeholder{
+    transform: translate(0px, -30px);
+    background: #ffffff;
+    margin: 4px;
+    transition: all;
+    transition-duration: 1s;
+
+}
+button{
+    margin: 5px;
+    padding: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    background: rgb(86, 185, 69);
+    border: 2px solid rgb(86, 185, 69);
+    color: rgb(86, 185, 69);;
+    background: transparent;
+    box-shadow: 2px 5px 5px rgb(130, 221, 114);
+}
+.botones{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+a{
+    color: black;
+    text-decoration: none;
+    font-size: 1.4em;
+}
+.grid-texto{
+    grid-area: datos;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.grid-tabla{
+    grid-area: tabla;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.grid-tabla{
+    grid-area: tabla;
+    width: 100%;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+}
+table{
+    border-collapse: collapse;
+    width: 100%;
+    border: 2px solid rgb(200,200,200);
+    letter-spacing: 1px;
+    font-size: 1.2rem;
+    text-align: center;
+}
+table input{
+    background: transparent;
+    border: 0px solid;
+    color: rgb(190, 36, 36);
+    font-weight: bold;
+    text-decoration:underline;
+}
+.tabla{
+    min-width: 400px;
+    max-height: 200px;
+    overflow:scroll;
+}
+td, th{
+border: 1px solid rgb(190,190,190);
+padding: 2px 1px 2px 3px;
+min-width: 130px;
+}
+
+tr:nth-child(even) td,th {
+background-color: rgb(250,250,250);
+}
+
+tr:nth-child(odd) td {
+background-color: rgb(245,245,245);
+}

@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    background: #9a616d;
+    width: 100%;
+}
+.contenedor{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;  
+}
+.cajalogin{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    max-width: 600px;
+    height: 100%;
+    max-height: 500px;
+    margin-top: 15px;
+}
+.cajalogin h1{
+    text-align:start;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 28px;
+}
+span.icon-user::before{
+    margin: 0;
+}
+span.icon-left::before{
+    margin: 0px;
+}
+.grid-parte1{
+    background:#ffffff;
+    width: 100%;
+    max-width: 400px;
+    height: 100%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 40px 40px 0px 40px;
+}
+.grid-parte2{
+    background: #ffffff;
+    width: 100%;
+    display: flex;
+    height: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding-bottom: 40px;
+}
+
+.flexbox{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+input {
+    padding: 10px;
+    margin-bottom: 25px;
+    border-radius: 5px;
+    font-size: 17px;
+    font-weight: lighter;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: gray;
+    border: 1px solid gray;  
+}
+.boton{
+    background: #262626;
+    color: white;
+    font-weight:700;
+    border: 1px solid transparent;
+    font-size: 14px;
+    padding: 12px;
+    transition: all;
+    transition-duration: 1s;
+}
+.boton:hover{
+    background: black;
+
+}
+.error_message{
+    color: #df0000;
+    margin-bottom: 15px;
+}
+.contenedor{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.foto{
+    background: url(../img/SILOS.jpg);
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    width:100%;
+    height:100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.hola{
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 2px;
+}
+input:focus{
+    border: 2px solid #1266f1;
+    outline: none;
+}
+
+input:focus::placeholder{
+    transform: translate(0px, -30px);
+    background: #ffffff;
+    margin: 4px;
+    transition: all;
+    transition-duration: 1s;
+
+}
+
+.fuente-icono{
+    font-size: 25px;
+    color: #1266f1;
+}
+@media screen and (max-width: 600px){
+    .contenedor{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: center;  
+    }
+    .cajalogin{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 320px;
+    }
+    .grid-parte1{
+        background:#ffffff;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        padding: 10px;
+        max-width: 300px;
+    }
+    .grid-parte2{
+    display: none;
+    }
+    .cajalogin h1{
+        text-align:start;
+        margin: 0px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 30px;
+    }
+    
+}
+@media screen and (max-width: 320px){
+    .contenedor{
+        width: 100%;
+    }
+    .cajalogin{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .grid-parte1{
+        background:#ffffff;
+        grid-area: parte1;
+        width: 80%;
+        height: max-content;
+        border-radius: 10px;
+        padding: 10px 10px 0px 10px;
+
+    }
+    .grid-parte2{
+    display: none;
+    }
+
+    .cajalogin h1{
+        font-size: 1.2em;
+    }
+    .hola{
+        font-size:1em;
+    }
+    input {
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        font-size: 14px;
+        font-weight: lighter;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: gray;
+        border: 1px solid gray;  
+    }
+}

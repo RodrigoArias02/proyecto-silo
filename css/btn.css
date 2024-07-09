@@ -1,0 +1,172 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100%;
+    background: #9a616d;
+}
+.nombre-flex-largo{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.nombre-flex-largo input{
+    width: 100%;
+
+}
+.contenedor-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+}
+select{
+    padding: 10px;
+    font-size: 1em;
+    margin: 10px 0px;
+    width: 90%;
+}
+.flex-caja{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.flex-hr{
+    display: flex;
+    justify-content: center;
+}
+hr{
+    margin: 10px;
+    width: 80%;
+}
+.flex-imagen{
+    background-image: url(../img/campo.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.flex-imagen-editar{
+    background-image: url(../img/campo.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.flex-registro{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: #ffffffff;
+    padding: 5px;
+}
+.flex-volver{
+    background: #ffffffff;
+    width: 100%;
+    height: 50px;
+    border-radius: 0px 0px 5px 5px;
+    display: flex;
+    align-items: center;
+    font-size: 1.5em;
+    padding: 5px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.flex-volver a{
+    color: black;
+    text-decoration: none;
+}
+input {
+    padding: 10px;
+    margin-bottom: 25px;
+    border-radius: 5px;
+    font-size: 17px;
+    font-weight: lighter;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: gray;
+    border: 1px solid gray;  
+}
+
+input:focus{
+    border: 2px solid #1266f1;
+    outline: none;
+}
+
+input:focus::placeholder{
+    transform: translate(0px, -30px);
+    background: #ffffff;
+    margin: 4px;
+    transition: all;
+    transition-duration: 1s;
+
+}
+.nombre-flex{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+.nombre-flex input{
+width: 48%;
+}
+.input-solo{
+    width: 100%;
+}
+button{
+    font-size: 1em;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    background: rgb(86, 185, 69);
+    border-radius: 5px;
+    border: 1px solid transparent;
+    box-shadow: 2px 5px 5px rgb(130, 221, 114);
+    
+}
+button:focus{
+    transition: all .8s;
+    scale: .9;
+}
+@media screen and (min-width:700px) {
+    .flex-caja{
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+    }
+    .flex-imagen{
+        background-image: url(../img/campo.webp);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 300px;
+        height: 228px;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 5px;
+    }
+    .flex-registro{
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+    .flex-imagen-editar{
+        background-image: url(../img/campo.webp);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 300px;
+        height: 319px;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 5px;
+    }
+}

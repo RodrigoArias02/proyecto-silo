@@ -1,0 +1,172 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100%;
+    background: #9a616d;
+}
+.nombre-flex-largo{
+    display: flex;
+    width: 100%;
+}
+.nombre-flex-largo input{
+    width: 100%;
+}
+.contenedor-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* select{
+    padding: 10px;
+    font-size: 1em;
+    margin: 10px 0px;
+    width: 100%;
+} */
+.grid-caja{
+    display: grid;
+    grid-template-areas:
+    "imagen registro"
+    "volver volver";
+    grid-template-rows: repeat(auto-fill, 1fr);
+    height: 100%;
+    border-radius: 5px;
+    margin: 15px;
+}
+.flex-hr{
+    display: flex;
+    justify-content: center;
+}
+hr{
+    margin: 10px;
+    width: 80%;
+}
+.grid-imagen{
+    background-image: url(../img/campo.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-area: imagen;
+    width: 200px;
+    height: 100%;
+    border-top-left-radius: 5px;
+}
+
+
+.grid-registro{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: #ffffffff;
+    grid-area: registro;
+
+    border-top-right-radius: 5px;
+    padding: 5px;
+}
+.grid-volver{
+    grid-area: volver;
+    background: #ffffffff;
+    width: 100%;
+    height: 50px;
+    border-radius: 0px 0px 5px 5px;
+    display: flex;
+    align-items: center;
+    font-size: 1.5em;
+    padding: 5px;
+}
+.grid-volver a{
+    color: black;
+    text-decoration: none;
+}
+input , select{
+    padding: 10px;
+    margin-bottom: 25px;
+    border-radius: 5px;
+    font-size: 17px;
+    font-weight: lighter;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: gray;
+    border: 1px solid gray;  
+}
+
+input:focus{
+    border: 2px solid #1266f1;
+    outline: none;
+}
+
+input:focus::placeholder{
+    transform: translate(0px, -30px);
+    background: #ffffff;
+    margin: 4px;
+    transition: all;
+    transition-duration: 1s;
+
+}
+.nombre-flex{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.nombre-flex input, .nombre-flex select{
+width: 48%;
+}
+.input-solo{
+    width: 100%;
+}
+button{
+    font-size: 1em;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    background: rgb(86, 185, 69);
+    border-radius: 5px;
+    border: 1px solid transparent;
+    box-shadow: 2px 5px 5px rgb(130, 221, 114);
+    
+}
+button:focus{
+    transition: all .8s;
+    scale: .9;
+}
+@media screen and (max-width:700px) {
+    .grid-caja{
+        display: grid;
+        grid-template-areas:
+        "imagen"
+        "registro"
+        "volver";
+        grid-template-rows: repeat(auto-fill, 1fr);
+        height: 100%;
+        border-radius: 5px;
+        margin: 15px;
+    }
+    .nombre-flex{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .nombre-flex input , .nombre-flex select{
+    width: 100%;
+    }
+    h2{
+        font-size: 1em;
+    }
+    .grid-registro{
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+        padding: 5px;
+    }
+    .contenedor-btn{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+}

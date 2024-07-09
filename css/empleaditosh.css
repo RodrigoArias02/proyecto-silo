@@ -1,0 +1,430 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #9a616d;
+
+}
+.grid-contenedor{
+    display: grid;
+    grid-template-areas:
+    "fecha promedio"
+    "tabla tabla";
+    grid-template-rows: repeat(auto-fit, 1fr);
+    height: 100%;
+    overflow-x: hidden;
+}
+@media screen and (max-width: 1200px){
+    .grid-contenedor{
+        display: grid;
+        grid-template-areas:
+        "fecha"
+        "promedio"
+        "tabla";
+    } 
+}
+/* _______________________________________________________________________________________________________ */
+.grid-fecha{
+    grid-area: fecha;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.contenedor-fecha{
+    display: flex;
+    flex-direction: column;
+}
+.imagen{
+    background-image: url(../img/hoja.jpg);
+    background-position: center;
+    background-size: contain;
+    width: 100%;
+    height: 150px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.datos{
+    width: 100%;
+    background: #ffffffff;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.datos input {
+    padding: 10px;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: lighter;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: gray;
+    border: 1px solid gray;  
+    width: 100%;
+}
+
+input:focus{
+    border: 2px solid #1266f1;
+    outline: none;
+}
+
+input:focus::placeholder{
+    transform: translate(0px, -30px);
+    background: #ffffff;
+    margin: 4px;
+    transition: all;
+    transition-duration: 1s;
+
+}
+button{
+    margin: 5px;
+    padding: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    background: rgb(86, 185, 69);
+    border: 2px solid rgb(86, 185, 69);
+    color: rgb(86, 185, 69);;
+    background: transparent;
+    box-shadow: 2px 5px 5px rgb(130, 221, 114);
+}
+.botones{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+a{
+    color: black;
+    text-decoration: none;
+    font-size: 1.4em;
+}
+
+/* ___________________________________________________________________________________________________ */
+.grid-promedio{
+    grid-area: promedio;
+    display: flex;
+    align-items: center;
+    min-height: 400px;
+}
+.contenedor-estadisticas{
+    display: flex;
+    flex-direction: row;
+    background: #ffffffff;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 600px;
+    height: max-content;
+    margin: auto;
+    justify-content:space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 15px 0px;
+}
+.contenedor-circulo{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.texto{
+    margin-top: 10px;
+}
+
+/* __________________________________________________________________________________________________________________ */
+.grid-tabla{
+    grid-area: tabla;
+    width: 100%;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+}
+table{
+    border-collapse: collapse;
+    width: 100%;
+    border: 2px solid rgb(200,200,200);
+    letter-spacing: 1px;
+    font-size: 1.2rem;
+    text-align: center;
+}
+.tablas{
+    overflow:scroll;
+    height:200px;
+    width:1100px;
+}
+td, th{
+border: 1px solid rgb(190,190,190);
+padding: 2px 1px 2px 3px;
+}
+
+tr:nth-child(even) td,th {
+background-color: rgb(250,250,250);
+}
+
+tr:nth-child(odd) td {
+background-color: rgb(245,245,245);
+}
+.eliminar{
+    background: transparent;
+    border: 0px solid;
+    font-weight: bold;
+    color: rgb(190, 36, 36);
+    text-decoration: underline;
+    font-size: 14px;
+
+}
+.editar{
+    background: transparent;
+    border: 0px solid;
+    font-weight: bold;
+    color: rgb(36, 98, 190);
+    text-decoration: underline;
+    font-size: 14px;
+
+}
+@media screen and (max-width: 1000px){
+    table{
+        border-collapse: collapse;
+        width: 100%;
+        border: 2px solid rgb(200,200,200);
+        letter-spacing: 1px;
+        font-size: 1rem;
+    
+    }
+}
+@media screen and (max-width: 500px){
+    table{
+
+        font-size: .7em;
+    }
+    .eliminar{
+        font-size: .7em;
+    
+    }
+    .editar{
+        font-size: .7em;
+    
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ________________________________________________________________________________________________- */
+/* CIRCULOS */
+.circular-progress{
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    background: linear-gradient(
+        0deg,
+        rgb(246, 97, 2) 50%,
+        rgba(246, 97, 2, 0.2) 50%
+    );
+    margin: auto;
+    position: relative;
+}
+.circular-progress::before{
+    content: "TEMPERATURA";
+    width: 8rem;
+    height: 8rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #ffffffff content-box;
+    border-radius: 50%;
+    padding: .7em;
+    box-sizing: border-box;
+    font-size: .8rem;
+    color: rgb(246, 97, 2);
+    text-align: center;
+    line-height: 6rem;
+    
+}
+.circular-progress::after{
+width: 8rem;
+height: 8rem;
+position: absolute;
+top: 0;
+left: 0;
+border-radius: 50%;
+background: linear-gradient(
+    transparent 50%,
+    #ffffffff 50%
+);
+
+text-align: center;
+color: rgb(246, 97, 2);
+line-height: 10rem; 
+transform: scale(1.1);
+}
+/* _________________________________________________________________________________________________________ */
+.circular-progress-humedad{
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    background: linear-gradient(
+        0deg,
+        #1266f1 50%,
+        rgba(18, 102, 241, 0.2) 50%
+    );
+    margin: auto;
+    position: relative;
+    
+}
+.circular-progress-humedad::before{
+    content: "HUMEDAD";
+    width: 8rem;
+    height: 8rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #ffffffff content-box;
+    border-radius: 50%;
+    padding: .7em;
+    box-sizing: border-box;
+    font-size: .8rem;
+    color: #1266f1;
+    text-align: center;
+    line-height: 6rem;
+    
+}
+.circular-progress-humedad::after{
+
+width: 8rem;
+height: 8rem;
+position: absolute;
+top: 0;
+left: 0;
+border-radius: 50%;
+background: linear-gradient(
+    transparent 50%,
+    #ffffffff 50%
+);
+
+text-align: center;
+color: #1266f1;
+line-height: 10rem; 
+transform: scale(1.1);
+}
+/* _______________________________________________________________________________________ */
+.circular-progress-gases{
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    background: linear-gradient(
+        0deg,
+        #7caac5 50%,
+        rgba(124, 170, 197, 0.2) 50%
+    );
+    margin: auto;
+    position: relative;
+    
+}
+.circular-progress-gases::before{
+    content: "GASES";
+    width: 8rem;
+    height: 8rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #ffffffff content-box;
+    border-radius: 50%;
+    padding: .7em;
+    box-sizing: border-box;
+    font-size: .8rem;
+    color: #7caac5;
+    text-align: center;
+    line-height: 6rem;
+    
+}
+.circular-progress-gases::after{
+
+width: 8rem;
+height: 8rem;
+position: absolute;
+top: 0;
+left: 0;
+border-radius: 50%;
+background: linear-gradient(
+    transparent 50%,
+    #ffffffff 50%
+);
+
+text-align: center;
+color: #7caac5;
+line-height: 10rem; 
+transform: scale(1.1);
+}
+
+@media screen and (max-width: 700px){
+    .circular-progress{
+        width: 5rem;
+        height: 5rem;
+        
+    }
+    .circular-progress::before{
+        content: "TEMPERATURA";
+        width: 5rem;
+        height: 5rem;
+        font-size: .5rem;
+        line-height: 4rem;
+        
+    }
+    .circular-progress::after{
+    width: 5rem;
+    height: 5rem;
+    line-height: 7rem; 
+    }
+
+    .circular-progress-humedad{
+        width: 5rem;
+        height: 5rem;
+        
+    }
+    .circular-progress-humedad::before{
+        content: "TEMPERATURA";
+        width: 5rem;
+        height: 5rem;
+        font-size: .5rem;
+        line-height: 4rem;
+        
+    }
+    .circular-progress-humedad::after{
+    width: 5rem;
+    height: 5rem;
+    line-height: 7rem; 
+    }
+
+    .circular-progress-gases{
+        width: 5rem;
+        height: 5rem;
+        
+    }
+    .circular-progress-gases::before{
+        content: "TEMPERATURA";
+        width: 5rem;
+        height: 5rem;
+        font-size: .5rem;
+        line-height: 4rem;
+        
+    }
+    .circular-progress-gases::after{
+    width: 5rem;
+    height: 5rem;
+    line-height: 7rem; 
+    }
+}

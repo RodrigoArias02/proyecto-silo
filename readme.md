@@ -25,5 +25,5 @@ Para ejecutar este proyecto en tu máquina local, sigue los siguientes pasos:
 
 1. Clona este repositorio:
    ```sh
-   git clone https://github.com/tuusuario/proyecto-silo.git](https://github.com/RodrigoArias02/proyecto-silo)
+   git clone https://github.com/RodrigoArias02/proyecto-silo
 # proyecto-silo
